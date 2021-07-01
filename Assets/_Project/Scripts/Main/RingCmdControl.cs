@@ -190,6 +190,10 @@ namespace Takap.Samples
                 if (_z > 180.0f)
                 {
                     _z = Mathf.Abs(360.0f - _z); // 180が一番うしろ
+                    if(_z > 180.0f)
+                    {
+                        _z = 180.0f - (_z - 180.0f);
+                    }
                 }
                 item.Rect.SetAnchoredPosZ(_z);
 
